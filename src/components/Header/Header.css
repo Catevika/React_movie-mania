@@ -1,0 +1,24 @@
+.header-container {
+  margin-bottom: 20px;
+}
+
+.header-container h1 {
+  width: 100%;
+  margin-right: auto;
+}
+
+.header-container nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  background: linear-gradient(90deg, var(--secondary-color) 0%, var(--light-accent-color) 20%, var(--dark-bg) 70%);
+}
+
+.logo-container img {
+  width: 8rem;
+  height: 8rem;
+}

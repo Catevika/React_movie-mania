@@ -1,12 +1,24 @@
 :root {
+  --dark-bg: hsl(0, 0%, 14%);
+  --dark-primary-white: hsla(0, 0%, 100%, 0.87);
+  --dark-primary-black: hsl(0, 0%, 14%);
+  --dark-accent-color: hsl(182, 99%, 70%);
+
+  --light-bg: hsl(0, 0%, 100%);
+  --light-primary-black: hsl(208, 37%, 20%);
+  --light-primary-white: hsl(0, 0%, 98%);
+  --light-accent-color: hsl(225, 86%, 64%);
+
+  --secondary-color: hsl(182, 99%, 30%);
+
   font-family: 'Urbanist', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--dark-primary-white);
+  background-color: var(--dark-bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,12 +28,17 @@
 }
 
 a {
-  color: #646cff;
-  text-decoration: inherit;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #535bf2;
+  color: var(--secondary-color);
+}
+
+a.active {
+  color: var(--dark-accent-color);
 }
 
 body {
@@ -41,13 +58,14 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--secondary-color);
   cursor: pointer;
   transition: border-color 0.25s;
 }
 
 button:hover {
-  border-color: #646cff;
+  color: var(--dark-primary-black);
+  background-color: var(--accent-color);
 }
 
 button:focus,
@@ -65,18 +83,19 @@ li {
   list-style: none;
 }
 
+main {
+  max-width: calc(100vw - 2rem);
+  min-height: calc(100vh - 12rem);
+}
+
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--dark-primary-black);
+    background-color: var(--light-bg);
   }
 
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
+  a.active {
+    color: var(--light-accent-color);
   }
 }
 
