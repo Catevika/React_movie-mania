@@ -1,0 +1,32 @@
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 1rem;
+  min-height: calc(100vh - 14rem);
+}
+
+.movie-container {
+  box-shadow: var(--dark-shadow-second);
+}
+
+.movie-container:nth-of-type(even) {
+  box-shadow: var(--light-shadow-accent);
+}
+
+.movie-container:nth-of-type(even) div>h3,
+.movie-container:nth-of-type(even) div>p:nth-of-type(3)>span {
+  color: var(--light-accent-color);
+}
+
+.movie-container:nth-of-type(even) a>button {
+  background-color: var(--light-accent-color);
+}
+
+.movie-container:nth-of-type(even) a>button:hover {
+  color: var(--light-accent-color);
+  background-color: var(--dark-primary-black);
+  border: 2px solid var(--light-accent-color);
+}

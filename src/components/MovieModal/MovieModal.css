@@ -1,0 +1,25 @@
+.movie-modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  background-color: var(--dark-bg-80);
+}
+
+.movie-modal-container img {
+  max-width: 100%;
+  height: calc(100% - 85px - 2rem);
+  margin: 110px auto 2rem;
+}
+
+@media screen and (max-width: 490px) {
+  .movie-modal-container img {
+    max-width: 80%;
+    height: auto;
+  }
+}
