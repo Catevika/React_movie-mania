@@ -1,26 +1,24 @@
 :root {
+  /* Dark theme colors */
   --ultra-dark-bg: hsl(0, 0%, 10%);
   --dark-bg: hsl(0, 0%, 14%);
-  --gray-bg: hsl(0, 0%, 30%);
-
   --dark-bg-80: hsla(0, 0%, 14%, 0.8);
-
-  --dark-linear-gradient: linear-gradient(180deg,
-      hsl(0deg 0% 14%) 0%,
-      hsl(0deg 0% 13%) 17%,
-      hsl(0deg 0% 13%) 33%,
-      hsl(0deg 0% 12%) 50%,
-      hsl(0deg 0% 11%) 67%,
-      hsl(0deg 0% 11%) 83%,
-      hsl(0deg 0% 10%) 100%);
-
+  --gray-bg: hsl(0, 0%, 30%);
+  --dark-linear-bg: linear-gradient(90deg, var(--secondary-color) 0%, var(--light-accent-color) 20%, var(--dark-bg) 70%);
   --dark-primary-white: hsla(0, 0%, 100%, 0.87);
   --dark-primary-black: hsl(0, 0%, 10%);
   --dark-accent-color: hsl(182, 99%, 70%);
 
+  /* Light theme colors */
   --light-bg: hsl(0, 0%, 100%);
+  --light-gray-bg: hsl(0, 0%, 45%);
+  --light-linear-bg: linear-gradient(90deg, var(--secondary-color) 0%, var(--light-accent-color) 20%, var(--light-bg) 70%);
+
+  --light-primary-white: hsl(0, 0%, 95%);
+  --light-primary-white-80: hsla(0, 0%, 95%, 0.8);
   --light-primary-black: hsl(208, 37%, 20%);
-  --light-primary-white: hsl(0, 0%, 98%);
+
+  /* Both dark and light theme colors */
   --light-accent-color: hsl(225, 86%, 64%);
   --light-shadow-accent:
     0.3px 0.5px 0.7px hsla(225, 68%, 38%, 0.36),
@@ -34,14 +32,28 @@
     2.1px 4.1px 5.2px -1.7px hsla(182, 100%, 15%, 0.36),
     5px 10px 12.6px -2.5px hsla(182, 100%, 15%, 0.36);
 
+  /* Toast colors */
+  --toast-linear-gradient: linear-gradient(180deg,
+      hsl(0deg 0% 14%) 0%,
+      hsl(0deg 0% 13%) 17%,
+      hsl(0deg 0% 13%) 33%,
+      hsl(0deg 0% 12%) 50%,
+      hsl(0deg 0% 11%) 67%,
+      hsl(0deg 0% 11%) 83%,
+      hsl(0deg 0% 10%) 100%);
 
+  --toastify-color-dark: var(--dark-bg-80);
+  --toastify-text-color-dark: var(--dark-primary-white);
+  --toastify-color-success: var(--secondary-color);
+  --toastify-color-error: #a81c0d;
+  --toastify-color-progress-dark: var(--toast-linear-gradient);
 
   font-family: 'Urbanist', sans-serif;
   font-size: 16px;
   line-height: 1.4rem;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: dark light;
   color: var(--dark-primary-white);
   background-color: var(--dark-bg);
 
@@ -52,6 +64,13 @@
   -webkit-text-size-adjust: 100%;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   font-weight: 700;
   color: inherit;
@@ -59,7 +78,7 @@ a {
 }
 
 a:hover {
-  color: var(--secondary-color);
+  color: var(--light-accent-color);
 }
 
 a.active {
@@ -92,16 +111,23 @@ button:hover {
   outline: none;
 }
 
-input[type='search'],
-select,
+input,
 textarea {
   font-family: inherit;
   outline: none;
+  border-width: 1px;
+}
+
+textarea {
+  background-color: hsl(0, 0%, 23%);
+}
+
+input[type='search']:hover {
+  outline: 1px solid var(--dark-accent-color);
 }
 
 button:focus-visible,
-input[type='search']:focus-visible,
-select:focus-visible,
+input:focus-visible,
 textarea:focus-visible {
   outline: 1px solid var(--dark-accent-color);
 }
@@ -112,6 +138,7 @@ li {
 
 main {
   margin-top: 85px;
+  min-height: calc(100vh - 10rem);
 }
 
 .message {
@@ -126,24 +153,38 @@ main {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: var(--dark-primary-black);
+    color: var(--light-primary-black);
     background-color: var(--light-bg);
   }
 
   a.active {
-    color: var(--light-accent-color);
+    color: var(--secondary-color);
+  }
+
+  button:hover {
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+  }
+
+  input,
+  textarea {
+    color: var(--light-primary-black);
+    background-color: var(--light-primary-white)
   }
 }
 
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
+@media screen and (max-width: 440px) {
+  main {
+    min-height: calc(100vh - 13rem);
+  }
 }
 
-@media screen and (max-width: 400px) {
-  main {
-    margin-top: 180px;
+@media (prefers-color-scheme: light) and (max-width: 440px) {
+  a:hover {
+    color: var(--dark-accent-color);
+  }
+
+  a.active {
+    color: var(--light-bg);
   }
 }
