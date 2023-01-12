@@ -6,7 +6,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Credits from './pages/Credits/Credits';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
-import NoMatch from './pages/noMatch/noMatch';
+import NoMatch from './pages/NoMatch/NoMatch';
 import './App.css';
 
 const router = createBrowserRouter(
