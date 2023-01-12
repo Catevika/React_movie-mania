@@ -31,12 +31,12 @@
 @media screen and (max-width: 440px) {
   .credits-container {
     justify-content: flex-start;
-    height: calc(100vh - 13rem);
+    height: calc(100vh - 12rem);
   }
 
   .credits-wrapper {
+    margin-top: 115px;
     padding: 15px;
-    margin-top: 95px;
   }
 
   .logo-container {

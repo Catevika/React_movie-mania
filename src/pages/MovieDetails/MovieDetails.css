@@ -76,15 +76,17 @@
   }
 }
 
-@media screen and (max-width: 540px) {
-  .moviedetails-wrapper {
-    margin-top: -2rem;
+@media screen and (max-width: 610px) {
+  .moviedetails-wrapper img:not(.moviedetails-logo) {
+    align-self: center;
+    height: auto;
+    width: 75%;
   }
 }
 
 @media screen and (max-width: 440px) {
   .moviedetails-wrapper {
-    margin-top: 0;
+    margin-top: 195px;
   }
 }
 

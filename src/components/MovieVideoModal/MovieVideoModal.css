@@ -13,18 +13,23 @@
   background-color: var(--dark-bg-80);
 }
 
+.movievideo-modal-container iframe {
+  width: 80%;
+  height: 30rem;
+  margin: 95px auto 20px;
+
+}
+
 @media screen and (max-width: 845px) {
   .movievideo-modal-container iframe {
-    width: 80%;
-    height: auto;
+    height: 33rem;
   }
 }
 
 @media screen and (max-width: 640px) {
   .movievideo-modal-container iframe {
-    margin-top: 175px;
-    width: 80%;
-    height: auto;
+    margin-top: 195px;
+    width: 90%;
   }
 }
 

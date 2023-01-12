@@ -173,6 +173,12 @@ main {
   }
 }
 
+@media screen and (max-width: 610px) {
+  main {
+    margin-top: 65px;
+  }
+}
+
 @media screen and (max-width: 440px) {
   main {
     min-height: calc(100vh - 13rem);

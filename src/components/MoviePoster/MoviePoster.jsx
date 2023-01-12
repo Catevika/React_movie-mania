@@ -32,9 +32,9 @@ export default function MoviePoster({ movieId }) {
   }
 
   return (
-    <div>
+    <>
       {posterUrl ? <img src={posterUrl} alt="Movie Poster" /> : null}
-    </div>
+    </>
   );
 };
 

@@ -58,11 +58,11 @@
 @media screen and (max-width: 575px) {
   .form-container {
     justify-content: flex-start;
-    height: calc(100vh - 4rem);
+    height: calc(100vh - 5rem);
   }
 
   .form-wrapper {
-    margin-top: 95px;
+    margin-top: 115px;
     padding: 0 20px 10px;
   }
 
