@@ -1,0 +1,26 @@
+.movievideo-container p {
+  margin: 20px 0 10px;
+}
+
+.movievideo-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 1rem 0 2rem;
+  gap: 10px;
+}
+
+.movievideo-wrapper li {
+  list-style: disc;
+  color: var(--secondary-color);
+}
+
+.movievideo-wrapper li:hover {
+  color: var(--light-accent-color);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 845px) {
+  .movievideo-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
