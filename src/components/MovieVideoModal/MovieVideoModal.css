@@ -15,22 +15,9 @@
 
 .movievideo-modal-container iframe {
   width: 80%;
-  height: 30rem;
+  height: auto;
+  aspect-ratio: 1.77;
   margin: 95px auto 20px;
-
-}
-
-@media screen and (max-width: 845px) {
-  .movievideo-modal-container iframe {
-    height: 33rem;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .movievideo-modal-container iframe {
-    margin-top: 195px;
-    width: 90%;
-  }
 }
 
 @media (prefers-color-scheme: light) {
