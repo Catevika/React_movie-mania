@@ -15,21 +15,23 @@ export default function Home() {
 
   return (
     <div className='home-container'>
-      <form onSubmit={handleSubmit} className='search-container'>
-        <input
-          type='search'
-          title='Search input'
-          name='search'
-          placeholder='Enter movie name... '
-          value={text}
-          onChange={(e) => setText(e.target.value)}
-          className='search-input'
-        />
-        <button title='Search button' type='submit' className='search-btn'>
-          <BiSearchAlt className='search-icon' title='Search icon' />
-        </button>
-      </form>
-      {term ? <Movies term={term} /> : <p className='message'>What movie are you looking for?</p>}
+      <div className='home-wrapper'>
+        <form onSubmit={handleSubmit} className='search-container'>
+          <input
+            type='search'
+            title='Search input'
+            name='search'
+            placeholder='Enter movie name... '
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            className='search-input'
+          />
+          <button title='Search button' type='submit' className='search-btn'>
+            <BiSearchAlt className='search-icon' title='Search icon' />
+          </button>
+        </form>
+        {term ? <Movies term={term} /> : <p className='message'>What movie are you looking for?</p>}
+      </div>
     </div>
   );
 }
