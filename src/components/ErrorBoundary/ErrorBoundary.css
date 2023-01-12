@@ -1,0 +1,16 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 10rem);
+  border: 1px solid var(--dark-primary-white);
+}
+
+.error-container p:nth-of-type(2) {
+  margin-top: 10px;
+  padding: 0.6em 1.2em;
+  color: var(--dark-primary-white);
+  background-color: hsl(0, 67%, 42%);
+  border-radius: 5px;
+}
