@@ -17,16 +17,24 @@
 }
 
 .movie-container:nth-of-type(even) div>h3,
-.movie-container:nth-of-type(even) div>p:nth-of-type(3)>span {
+.movie-container:nth-of-type(even) div>p:nth-of-type(4)>span {
   color: var(--light-accent-color);
 }
 
-.movie-container:nth-of-type(even) a>button {
+.movie-container:nth-of-type(even) a {
   background-color: var(--light-accent-color);
 }
 
-.movie-container:nth-of-type(even) a>button:hover {
+.movie-container:nth-of-type(even) a:hover {
   color: var(--light-accent-color);
   background-color: var(--dark-primary-black);
   border: 2px solid var(--light-accent-color);
+}
+
+@media (prefers-color-scheme: light) {
+
+  .movie-container:nth-of-type(even) a:hover,
+  .movie-container:nth-of-type(2n) a:hover {
+    background-color: var(--light-primary-white);
+  }
 }

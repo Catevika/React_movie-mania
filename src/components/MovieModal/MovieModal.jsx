@@ -1,9 +1,9 @@
 import './MovieModal.css';
 
-export default function MovieModal({ posterPath, toggleModal }) {
+export default function MovieModal({ posterPath }) {
   return (
-    <div className="movie-modal-container">
-      <img src={'https://image.tmdb.org/t/p/w500' + posterPath} alt="Movie poster" />
-    </div>
+    <div id='movie-modal-container' className='movie-modal-container' >
+      <img src={'https://image.tmdb.org/t/p/w500' + posterPath} alt="Movie poster" className='movie-modal-container-img' />
+    </div >
   );
 }
