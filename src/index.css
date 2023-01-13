@@ -113,7 +113,7 @@ button:hover {
 
 input,
 textarea {
-  font-family: inherit;
+  font-family: 2rem;
   outline: none;
   border-width: 1px;
 }
