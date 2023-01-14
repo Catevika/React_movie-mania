@@ -15,16 +15,14 @@ export default function Contact() {
       .then((result) => {
         console.log(result.text);
         toast.success('Email sent successfully', {
-          theme: "dark"
-        }, {
-          position: toast.POSITION.BOTTOM_CENTER
+          position: toast.POSITION.BOTTOM_CENTER,
+          theme: 'dark'
         });
       }, (error) => {
         console.log(error.text);
         toast.error('Email sending failed', {
-          theme: "dark"
-        }, {
-          position: toast.POSITION.BOTTOM_CENTER
+          position: toast.POSITION.BOTTOM_CENTER,
+          theme: 'dark'
         });
       });
 

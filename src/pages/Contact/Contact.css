@@ -36,15 +36,12 @@
   width: 60vw;
   max-width: 500px;
   padding: 7px 10px;
-  color: var(--light-primary-black);
   border-radius: 10px;
   outline: none;
 }
 
 .form-input.textarea {
   height: 8rem;
-  color: var(--light-primary-black);
-  background-color: hsl(0, 0%, 23%);
 }
 
 .form-input:hover {
@@ -81,10 +78,6 @@
 }
 
 @media (prefers-color-scheme: light) {
-  .form-input.textarea {
-    background-color: var(--light-primary-white);
-  }
-
   .form-btn:hover {
     background-color: var(--light-primary-white);
   }

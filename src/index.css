@@ -114,12 +114,10 @@ button:hover {
 input,
 textarea {
   font-family: 2rem;
+  color: var(--dark-primary-white);
+  background-color: var(--dark-bg-80);
   outline: none;
   border-width: 1px;
-}
-
-textarea {
-  background-color: hsl(0, 0%, 23%);
 }
 
 input[type='search']:hover {
@@ -153,6 +151,8 @@ main {
 
 @media (prefers-color-scheme: light) {
   :root {
+    --toastify-color-light: var(--light-primary-white-80);
+
     color: var(--light-primary-black);
     background-color: var(--light-bg);
   }
@@ -169,7 +169,7 @@ main {
   input,
   textarea {
     color: var(--light-primary-black);
-    background-color: var(--light-primary-white)
+    background-color: var(--light-primary-white);
   }
 }
 

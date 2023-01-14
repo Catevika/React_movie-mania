@@ -2,6 +2,7 @@ import { useRef, useState } from 'react';
 import MovieVideoModal from '../MovieVideoModal/MovieVideoModal';
 
 export default function MovieVideo({ movieVideo }) {
+  const { name, key } = movieVideo;
   const modalRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function MovieVideo({ movieVideo }) {
 
   return (
     <div onClick={handleClick} >
-      {movieVideo.name}
-      {isOpen ? <MovieVideoModal moviekey={movieVideo.key} modalRef={modalRef} title={movieVideo.name} /> : null}</div>
+      {name}
+      {isOpen ? <MovieVideoModal moviekey={key} modalRef={modalRef} title={name} /> : null}</div>
   );
 }
