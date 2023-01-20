@@ -39,7 +39,7 @@ export default function Movie({ movie }) {
       {poster_path ? <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt="Movie poster" ref={modalRef} onClick={toggleModal} className='movie-wrapper-img' /> : <div className='image-replacement'><p>No poster available</p><p><MdOutlineImageNotSupported /></p>
       </div>}
       <h3>{title}</h3>
-      <p><strong>Release Date</strong>{release_date}</p>
+      <p><strong>Release Date:</strong> {release_date}</p>
       <p><strong>Original language:</strong> {original_language}</p>
       <p><strong>Overview:</strong> {overview ? overview : 'none'}</p>
       <p><strong>Vote average:</strong> <span>{vote_average}</span> <strong>Vote count:</strong> <span>{vote_count}</span></p>

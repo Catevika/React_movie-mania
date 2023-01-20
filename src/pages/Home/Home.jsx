@@ -21,7 +21,7 @@ export default function Home() {
             type='search'
             title='Search input'
             name='search'
-            placeholder='Enter movie name... '
+            placeholder='Enter movie name...'
             value={text}
             onChange={(e) => setText(e.target.value)}
             className='search-input'

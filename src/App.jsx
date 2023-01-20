@@ -9,7 +9,7 @@ import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import NoMatch from './pages/NoMatch/NoMatch';
 import './App.css';
 
-const router = createBrowserRouter(
+export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RouteLayout />} errorElement={<ErrorBoundary />} >
       <Route index element={<Home />} errorElement={<ErrorBoundary />} />
