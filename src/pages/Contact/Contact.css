@@ -37,7 +37,17 @@
   max-width: 500px;
   padding: 7px 10px;
   border-radius: 10px;
-  outline: none;
+  outline: transparent;
+}
+
+.form-error {
+  min-width: 230px;
+  width: 60vw;
+  max-width: 500px;
+  padding: 7px 10px;
+  border-radius: 10px;
+  color: var(--toastify-color-error);
+  border: 1px solid var(--toastify-color-error);
 }
 
 .form-input.textarea {
