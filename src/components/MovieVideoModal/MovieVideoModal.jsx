@@ -2,7 +2,7 @@ import './MovieVideoModal.css';
 
 export default function MovieVideoModal({ moviekey, modalRef, title }) {
   return (
-    <div className='movievideo-modal-container'>
+    <div data-testid="movievideo-modal-container" className='movievideo-modal-container'>
       <iframe
         ref={modalRef}
         title={title}
