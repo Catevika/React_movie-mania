@@ -5,7 +5,7 @@ import './Home.css';
 
 export default function Home() {
   const [text, setText] = useState('');
-  const [term, setTerm] = useState(JSON.parse((localStorage.getItem('term', text))) || text);
+  const [term, setTerm] = useState(JSON.parse((localStorage.getItem('term'))) || text);
 
   const handleSubmit = (e) => {
     e.preventDefault();
