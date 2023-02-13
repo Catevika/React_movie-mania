@@ -1,10 +1,18 @@
 import { MemoryRouter } from 'react-router-dom';
 import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import axios from 'axios';
 import { getMovieData } from '../api/api';
+import { movieMock } from './__mocks__/movieMock';
 import Home from '../pages/Home/Home';
 
 const user = userEvent.setup();
+
+vi.mock('axios');
+
+beforeEach(() => {
+	axios.get.mockReset();
+});
 
 describe('Home', () => {
 	test('Search field should render properly', () => {
@@ -37,6 +45,10 @@ describe('Home', () => {
 	});
 
 	test('button Search should launch the search', async () => {
+		axios.get.mockResolvedValue({
+			data: movieMock
+		});
+
 		render(
 			<MemoryRouter>
 				<Home />
@@ -49,16 +61,9 @@ describe('Home', () => {
 		const searchButton = await screen.findByTitle(/search button/i);
 		await user.click(searchButton);
 
-		const response = await waitFor(() => getMovieData(input.value));
-		const movies = response.data.results;
+		const movies = await waitFor(() => getMovieData(input.value));
 
-		render(
-			<MemoryRouter>
-				<Home />
-			</MemoryRouter>
-		);
-
-		expect(await screen.findByText(movies[0].title)).toBeInTheDocument();
+		expect(await screen.findByText(movies.data.results[0].title)).toBeInTheDocument();
 	});
 });
 

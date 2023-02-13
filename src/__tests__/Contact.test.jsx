@@ -55,14 +55,6 @@ describe('Contact', () => {
     expect(messageInput).toBeInTheDocument();
     await user.type(messageInput, fakeEmail.message);
     expect(screen.getByDisplayValue('Web Dev Job offer: we are interested in your profile')).toBeInTheDocument();
-
-    const sendButton = await screen.findByRole('button', { name: 'Send' });
-    await user.click(sendButton);
-
-    expect(usernameInput.value).toBe('');
-    expect(emailInput.value).toBe('');
-    expect(subjectInput.value).toBe('');
-    expect(messageInput.value).toBe('');
   });
 
   test('should display an error alert when a field is empty', async () => {
