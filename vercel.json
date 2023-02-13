@@ -6,7 +6,7 @@
     {
       "src": "/(.*)",
       "status": 404,
-      "dest": "/pages/NoMatch/NoMatch.html"
+      "dest": "./NoMatch.html"
     }
   ]
 }
