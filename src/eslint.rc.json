@@ -1,0 +1,44 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest/globals": true,
+    "cypress/globals": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:cypress/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "jest",
+    "cypress"
+  ],
+  "rules": {
+    "no-underscore-dangle": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "always"
+      }
+    ],
+    "cypress/no-assigning-return-values": "error",
+    "cypress/no-unnecessary-waiting": "error",
+    "cypress/assertion-before-screenshot": "warn",
+    "cypress/no-force": "warn",
+    "cypress/no-async-tests": "error",
+    "cypress/no-pause": "error"
+  }
+}
