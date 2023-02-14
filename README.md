@@ -36,9 +36,10 @@ Main implemented features
 
 Use of
 
-- **Vite React**
+- **Vite React** [Vite](https://vitejs.dev/)
 - **Themoviedb** [API](https://www.themoviedb.org/documentation/api)
-- **Responsive Design** Media Queries
+- **Unit tests** [Vitest](https://vitest.dev/) + [React Testing Library](https://testing-library.com/docs/)
+- **End to end tests** [Cypress](https://www.cypress.io/)
 
 ## Tech used
 
@@ -46,6 +47,7 @@ Use of
 - **Code editor** [VSCode](https://code.visualstudio.com/)
 - **Version control** [Git](https://git-scm.com/)
 - **Markdown** --> my VSCode [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension
+- **CI/CD** --> Github actions
 
 ## How to use
 
