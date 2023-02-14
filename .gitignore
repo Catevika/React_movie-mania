@@ -22,5 +22,6 @@ dist-ssr
 *.sln
 *.sw?
 
+eslint.rc.json
 .hintrc
 .env

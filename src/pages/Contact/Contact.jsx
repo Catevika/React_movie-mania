@@ -32,21 +32,21 @@ export default function Contact() {
   return (
     <div className='form-container'>
       <form ref={form} className='form-wrapper' onSubmit={sendEmail}>
-        <p title='Contact us' className='form-text'>Contact us:</p>
+        <p title='Contact us' className='form-text'>Contact us&#58;</p>
         <div className='form-group'>
           <label title='Full name' htmlFor='username'>
             Full name
           </label>
           <input
             type='text'
+            id='username'
             name='username'
-            title='Full name input'
-            min={3}
-            max={20}
+            title='Full name: from 2 to 20 characters'
+            minLength={2}
+            maxLength={20}
             required
-            placeholder='Full name'
+            placeholder='Enter your full name'
             autoComplete='username'
-            autoFocus={true}
             className='form-input'
           />
         </div>
@@ -56,27 +56,29 @@ export default function Contact() {
           </label>
           <input
             type='email'
+            id='email'
             name='email'
-            title='Email input'
-            max={20}
+            title='Email: up to 20 characters'
+            maxLength={20}
             required
-            placeholder='Email'
+            placeholder="Enter your email"
             autoComplete='email'
             className='form-input'
           />
         </div>
         <div className='form-group'>
-          <label title='Full name' htmlFor='username'>
+          <label title='subject' htmlFor='subject'>
             Subject
           </label>
           <input
             type='text'
+            id='subject'
             name='subject'
-            title='Subject input'
-            min={3}
-            max={50}
+            title='Subject: from 2 to 50 characters'
+            minLength={2}
+            maxLength={50}
             required
-            placeholder='Subject'
+            placeholder="Enter a subject"
             className='form-input'
           />
         </div>
@@ -85,11 +87,15 @@ export default function Contact() {
             Message
           </label>
           <textarea
+            id='message'
             name='message'
-            title='Message'
-            placeholder='Your message'
+            title='Message: from 2 to 42O characters'
+            minLength={2}
+            maxLength={420}
+            required
+            placeholder="Enter your message"
             className='form-input textarea'
-          ></textarea>
+          />
         </div>
         <button title='Send' type='submit' className='form-btn'>
           Send
@@ -98,4 +104,4 @@ export default function Contact() {
       </form>
     </div>
   );
-}
+};

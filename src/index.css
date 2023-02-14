@@ -97,7 +97,7 @@ button {
   padding: 0.6em 1.2em;
   color: var(--dark-primary-black);
   border-radius: 5px;
-  outline: none;
+  outline: transparent;
   background-color: var(--secondary-color);
   border: 2px solid transparent;
   transition: border-color 0.25s;
@@ -108,16 +108,22 @@ button:hover {
   color: var(--dark-primary-white);
   background-color: var(--dark-primary-black);
   border: 2px solid var(--dark-accent-color);
-  outline: none;
+  outline: transparent;
 }
 
 input,
 textarea {
-  font-family: 2rem;
-  color: var(--dark-primary-white);
+  font-family: inherit;
+  font-size: 1.1rem;
+  color: var(--dark-accent-color);
   background-color: var(--dark-bg-80);
-  outline: none;
+  outline: transparent;
   border-width: 1px;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--dark-accent-color);
+  -webkit-box-shadow: 0 0 0 50px var(--dark-bg-80) inset;
 }
 
 input[type='search']:hover {
@@ -168,8 +174,13 @@ main {
 
   input,
   textarea {
-    color: var(--light-primary-black);
+    color: var(--secondary-color);
     background-color: var(--light-primary-white);
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: var(--secondary-color);
+    -webkit-box-shadow: 0 0 0 50px var(--light-primary-white) inset;
   }
 }
 

@@ -24,11 +24,11 @@ export default function About() {
           <p><span>Techniques</span></p>
           <ul>
             <li className='about-item'>
-              <FaMobileAlt className='about-icon' />
+              <FaMobileAlt className='about-icon' data-testid="mobile" />
               <p className='about-item-text'>Fully <strong>responsive</strong> format starting from <strong>320px</strong> wide</p>
             </li>
             <li className='about-item'>
-              <BiSearchAlt className='about-icon big' />
+              <BiSearchAlt className='about-icon big' data-testid="search" />
               <p className='about-item-text'><strong> Search bar</strong> to find amaizing movies and their trailers</p>
             </li>
           </ul>
