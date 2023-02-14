@@ -6,6 +6,7 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Credits from './pages/Credits/Credits';
 import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
+import NoMatch from './pages/NoMatch/NoMatch';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path='about' element={<About />} errorElement={<ErrorBoundary />} />
           <Route path='contact' element={<Contact />} errorElement={<ErrorBoundary />} />
           <Route path='credits' element={<Credits />} errorElement={<ErrorBoundary />} />
+          <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>
     </>
