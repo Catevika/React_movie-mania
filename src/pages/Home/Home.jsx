@@ -5,7 +5,7 @@ import './Home.css';
 
 export default function Home() {
   const [text, setText] = useState('');
-  const [term, setTerm] = useState(JSON.parse((localStorage.getItem('term', text))) || text);
+  const [term, setTerm] = useState(JSON.parse((localStorage.getItem('term'))) || text);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -21,7 +21,7 @@ export default function Home() {
             type='search'
             title='Search input'
             name='search'
-            placeholder='Enter movie name... '
+            placeholder='Enter movie name...'
             value={text}
             onChange={(e) => setText(e.target.value)}
             className='search-input'

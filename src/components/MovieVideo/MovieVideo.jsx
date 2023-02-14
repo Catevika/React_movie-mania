@@ -13,7 +13,7 @@ export default function MovieVideo({ movieVideo }) {
   };
 
   const scrollbarHidden = () => {
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = 'auto';
   };
 
   const toggleModal = () => {
@@ -28,7 +28,7 @@ export default function MovieVideo({ movieVideo }) {
   }
 
   return (
-    <div onClick={handleClick} >
+    <div onClick={handleClick} data-testid="movie video link">
       {name}
       {isOpen ? <MovieVideoModal moviekey={key} modalRef={modalRef} title={name} /> : null}</div>
   );

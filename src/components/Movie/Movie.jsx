@@ -20,7 +20,7 @@ export default function Movie({ movie }) {
   };
 
   const scrollbarHidden = () => {
-    document.body.style.overflow = 'unset';
+    document.body.style.overflow = 'auto';
   };
 
   const toggleModal = () => {
@@ -36,10 +36,10 @@ export default function Movie({ movie }) {
 
   return (
     <div className='movie-wrapper' onClick={isOpen ? handleClick : null} style={style}>
-      {poster_path ? <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt="Movie poster" ref={modalRef} onClick={toggleModal} className='movie-wrapper-img' /> : <div className='image-replacement'><p>No poster available</p><p><MdOutlineImageNotSupported /></p>
+      {poster_path ? <img src={'https://image.tmdb.org/t/p/w500' + poster_path} alt="Movie poster" ref={modalRef} onClick={toggleModal} className='movie-wrapper-img' /> : <div className='image-replacement'><p>No poster available</p><p data-testid="image-replacement-p"><MdOutlineImageNotSupported /></p>
       </div>}
       <h3>{title}</h3>
-      <p><strong>Release Date</strong>{release_date}</p>
+      <p><strong>Release Date:</strong> {release_date}</p>
       <p><strong>Original language:</strong> {original_language}</p>
       <p><strong>Overview:</strong> {overview ? overview : 'none'}</p>
       <p><strong>Vote average:</strong> <span>{vote_average}</span> <strong>Vote count:</strong> <span>{vote_count}</span></p>
