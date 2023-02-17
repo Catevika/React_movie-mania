@@ -1,5 +1,5 @@
 import { BrowserRouter, MemoryRouter, NavLink } from "react-router-dom";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from '@testing-library/user-event';
 import App from "../App";
 import Header from "../components/Header/Header";
@@ -48,7 +48,7 @@ describe('Header', () => {
 
     const aboutNavLink = screen.getByText('About');
 
-    await user.click(aboutNavLink);
+    await waitFor(() => user.click(aboutNavLink));
 
     expect(screen.getByText('Author')).toBeInTheDocument();
   });
@@ -62,7 +62,7 @@ describe('Header', () => {
 
     const contactNavLink = screen.getByText('Contact');
 
-    await user.click(contactNavLink);
+    await waitFor(() => user.click(contactNavLink));
 
     expect(screen.getByText('Contact us:')).toBeInTheDocument();
   });
@@ -76,7 +76,7 @@ describe('Header', () => {
 
     const creditsNavLink = screen.getByText('Credits');
 
-    await user.click(creditsNavLink);
+    await waitFor(() => user.click(creditsNavLink));
 
     expect(screen.getByText('This product uses The Movie Database (TMDB) API but is not endorsed or certified by TMDB.')).toBeInTheDocument();
   });
@@ -98,7 +98,7 @@ describe('Header', () => {
     const aboutNavLink = screen.getByText('About');
     expect(aboutNavLink).not.toHaveClass('active');
 
-    await user.click(aboutNavLink);
+    await waitFor(() => user.click(aboutNavLink));
 
     expect(aboutNavLink).toHaveClass('active');
   });

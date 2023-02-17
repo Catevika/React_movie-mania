@@ -69,11 +69,11 @@ describe('MovieVideoModal', () => {
 		const movieVideo = movieVideos[22];
 		const moviekey = movieVideo.key;
 
-		render(
-			<MemoryRouter>
-				<MovieVideos movieId={movieId} />
-			</MemoryRouter>
-		);
+		// render(
+		// 	<MemoryRouter>
+		// 		<MovieVideos movieId={movieId} />
+		// 	</MemoryRouter>
+		// );
 
 		render(
 			<MemoryRouter>
@@ -83,7 +83,7 @@ describe('MovieVideoModal', () => {
 
 		const videoLink = screen.getByText(movieVideo.name);
 
-		await user.click(videoLink);
+		await waitFor(() => user.click(videoLink));
 
 		const videoModal = screen.getByTitle(movieVideo.name);
 		expect(videoModal.src).toBe(`https://www.youtube.com/embed/${moviekey}`
@@ -92,7 +92,7 @@ describe('MovieVideoModal', () => {
 		expect(document.body).toHaveStyle('overflow: hidden;');
 
 		const modalDiv = screen.getByTestId('movievideo-modal-container');
-		await user.click(modalDiv);
+		await waitFor(() => user.click(modalDiv));
 
 		expect(videoLink).toBeInTheDocument();
 		expect(document.body).toHaveStyle('overflow: auto;');

@@ -116,14 +116,14 @@ describe('MovieModal', () => {
 
 		const poster = screen.getByAltText('Movie poster');
 
-		await user.click(poster);
+		await waitFor(() => user.click(poster));
 
 		const posterModal = screen.getByAltText('Big Movie poster');
 		expect(posterModal.src).toBe('https://image.tmdb.org/t/p/w500' + movie.poster_path);
 		expect(document.body).toHaveStyle('overflow: hidden;');
 
 		const posterWrapper = screen.getByTestId('movie-wrapper');
-		await user.click(posterWrapper);
+		await waitFor(() => user.click(posterWrapper));
 		expect(poster).toBeInTheDocument();
 		expect(document.body).toHaveStyle('overflow: auto;');
 	});

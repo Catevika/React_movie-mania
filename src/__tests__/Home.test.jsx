@@ -35,12 +35,12 @@ describe('Home', () => {
 		const input = screen.getByPlaceholderText('Enter movie name...');
 		expect(input.value).toBe('');
 
-		await user.type(input, 'Top Gun');
+		await waitFor(() => user.type(input, 'Top Gun'));
 		expect(input.value).toBe('Top Gun');
 
-		await user.clear(input);
+		await waitFor(() => user.clear(input));
 
-		await user.type(input, 'Avatar');
+		await waitFor(() => user.type(input, 'Avatar'));
 		expect(input.value).toBe('Avatar');
 	});
 
@@ -56,10 +56,10 @@ describe('Home', () => {
 		);
 
 		const input = screen.getByPlaceholderText(/enter movie name.../i);
-		await user.type(input, 'Top Gun');
+		await waitFor(() => user.type(input, 'Top Gun'));
 
 		const searchButton = await screen.findByTitle(/search button/i);
-		await user.click(searchButton);
+		await waitFor(() => user.click(searchButton));
 
 		const movies = await waitFor(() => getMovieData(input.value));
 
@@ -79,10 +79,10 @@ describe('localStorage', () => {
 			</MemoryRouter>);
 
 		const input = screen.getByPlaceholderText(/Enter movie name.../i);
-		await user.type(input, 'Avatar');
+		await waitFor(() => user.type(input, 'Avatar'));
 
 		const searchButton = await screen.findByTitle(/search button/i);
-		await user.click(searchButton);
+		await waitFor(() => user.click(searchButton));
 
 		const termValue = localStorage.getItem('term');
 
