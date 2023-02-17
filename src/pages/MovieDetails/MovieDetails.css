@@ -70,23 +70,15 @@
   }
 
   .moviedetails-wrapper img:not(.moviedetails-logo) {
-    margin: 0 auto;
-    height: auto;
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 610px) {
-  .moviedetails-wrapper img:not(.moviedetails-logo) {
     align-self: center;
     height: auto;
-    width: 75%;
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 440px) {
   .moviedetails-wrapper {
-    margin-top: 195px;
+    margin-top: 180px;
   }
 }
 

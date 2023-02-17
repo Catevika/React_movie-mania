@@ -38,8 +38,8 @@ export default function MovieDetails() {
         <MoviePoster movieId={movieId} />
         <div className='moviedetails'>
           <h2>{movieInfos.title}</h2>
-          {movieInfos?.tagline ? <h3 className='moviedetails-tagline'>{movieInfos.tagline}</h3> : <p>Not available</p>}
-          {movieInfos?.overview ? <p className='moviedetails-overview'>{movieInfos.overview}</p> : <p>Not available</p>}
+          {movieInfos?.tagline ? <h3 className='moviedetails-tagline'>{movieInfos.tagline}</h3> : <p>Tagline: Not available</p>}
+          {movieInfos?.overview ? <p className='moviedetails-overview'>{movieInfos.overview}</p> : <p>Overview: Not available</p>}
 
           {genres.length === 1 ? <p>Genre: <span>{genres.map(genre => genre.name)}</span></p>
             : genres.length > 1 ? <p>Genres: <span>{genres.map(genre => genre.name).join(' - ')}</span></p> : <p>Genre: <span>Not available</span></p>}

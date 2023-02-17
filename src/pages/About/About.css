@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 10rem);
+  min-height: calc(100vh - 10rem);
 }
 
 .about-wrapper {
@@ -50,10 +50,15 @@
   stroke: var(--secondary-color);
 }
 
+@media screen and (max-width: 610px) {
+  .about-container {
+    min-height: calc(100vh - 9rem);
+  }
+}
+
 @media screen and (max-width: 440px) {
   .about-container {
     justify-content: flex-start;
-    height: calc(100vh - 6rem);
   }
 
   .about-wrapper {

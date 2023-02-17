@@ -19,9 +19,9 @@ export default function MoviePoster({ movieId }) {
   }, [movieId]);
 
   return (
-    <div>
+    <>
       {posterUrl ? <img src={posterUrl} alt="MovieDetails poster" /> : null}
-    </div>
+    </>
   );
 };
 
