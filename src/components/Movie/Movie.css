@@ -69,6 +69,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 3.5rem;
   padding: 10px 0;
   margin-top: 20px;
   border-top: 1px solid var(--dark-primary-white);

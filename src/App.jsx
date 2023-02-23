@@ -5,7 +5,6 @@ import MovieDetails from './pages/MovieDetails/MovieDetails';
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Credits from './pages/Credits/Credits';
-import ErrorBoundary from './components/ErrorBoundary/ErrorBoundary';
 import NoMatch from './pages/NoMatch/NoMatch';
 import './App.css';
 
@@ -14,12 +13,12 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<RouteLayout />} errorElement={<ErrorBoundary />} end>
-          <Route index element={<Home />} errorElement={<ErrorBoundary />} />
-          <Route path='movie/:movieId' element={<MovieDetails />} errorElement={<ErrorBoundary />} />
-          <Route path='about' element={<About />} errorElement={<ErrorBoundary />} />
-          <Route path='contact' element={<Contact />} errorElement={<ErrorBoundary />} />
-          <Route path='credits' element={<Credits />} errorElement={<ErrorBoundary />} />
+        <Route path='/' element={<RouteLayout />} >
+          <Route index element={<Home />} />
+          <Route path='movie/:movieId' element={<MovieDetails />} />
+          <Route path='about' element={<About />} />
+          <Route path='contact' element={<Contact />} />
+          <Route path='credits' element={<Credits />} />
           <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>

@@ -5,7 +5,6 @@ import { getMovieDetailsData, getMovieVideoData } from '../api/api';
 import { movieDetailsMock } from './__mocks__/movieDetailsMock';
 import { movieVideoMock } from './__mocks__/movieVideoMock';
 import MovieDetails from '../pages/MovieDetails/MovieDetails';
-import MovieVideos from '../components/MovieVideos/MovieVideos';
 import MovieVideo from '../components/MovieVideo/MovieVideo';
 import userEvent from '@testing-library/user-event';
 
@@ -68,12 +67,6 @@ describe('MovieVideoModal', () => {
 		const movieVideos = movieVideoData.data.results;
 		const movieVideo = movieVideos[22];
 		const moviekey = movieVideo.key;
-
-		// render(
-		// 	<MemoryRouter>
-		// 		<MovieVideos movieId={movieId} />
-		// 	</MemoryRouter>
-		// );
 
 		render(
 			<MemoryRouter>
